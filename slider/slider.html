@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider</title>
+    <link rel="stylesheet" href="/slider/slider.css">
+    <script src="/slider/addElementsSlide.js" id="addElementsSlide"></script>
+</head>
+<body>
+    <main id="main">
+        <h2>My Slider</h2>
+        <div id="controls">
+            <label>
+                Слайд по кругу 
+                <input type="checkbox" id="loop" checked>
+                <span class="sli"></span>
+            </label>
+            <label>
+                Стрелочки навигации 
+                <input type="checkbox" id="navs" checked>
+                <span class="sli"></span>
+            </label>
+            <label>
+                Пагинация 
+                <input type="checkbox" id="pags" checked>
+                <span class="sli"></span>
+            </label>
+            <label>
+                Свап 
+                <input type="checkbox" id="swipe">
+                <span class="sli"></span>
+            </label>
+            <label>
+                Слайд-шоу 
+                <input type="checkbox" id="auto">
+                <span class="sli"></span>
+            </label>
+            <label>
+                Остановка при наведении 
+                <input type="checkbox" id="stopMouseHover">
+                <span class="sli"></span>
+            </label>
+            <label>
+                Время(сек):
+                <input type="number" id="delay" value="5" min="1" max="60" onkeypress="return false">
+            </label>
+        </div>
+    </main>
+</body>
+</html>

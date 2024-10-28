@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDoListe</title>
+    <link rel="stylesheet" href="/ToDoList/style.css">
+    <script src="/ToDoList/todo.js"></script>
+</head>
+<body>
+    <main id="main">
+        <div id="container">
+            <div id="block_add_todo">
+                <h2>My ToDo List</h2>
+                <div id="add_todo">
+                    <input id="input_todo" type="text" placeholder="Title...">
+                    <span id="btn_add" onclick="add_todo()">Add</span>  
+                </div>
+            </div>
+            <ul id="todo">
+                <li><input type="checkbox"> Закончить проект</li>
+                <li><input type="checkbox"> Закрыть сессию</li>
+                <li><input type="checkbox"> Оформить соц-стипендию</li>
+            </ul>
+        </div>
+    </main>
+    <footer style="display: none;">
+        <div>
+            <span onclick="allChecboxCheked('selectAll')">Выбрать все</span>
+            <span onclick="allChecboxCheked('cancelSelect')">Очистить выбор</span>
+            <span onclick="allChecboxCheked('piu')">Сделать выполненным</span>
+            <span onclick="allChecboxCheked('delete')">Удалить</span>
+        </div>
+    </footer>
+</body>
+</html>
