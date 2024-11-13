@@ -24,7 +24,7 @@ footer {
 
 footer div{
     display: flex;
-    margin: 0% 5%;
+    margin: 0 5%;
     background-color: #1a649b;
     padding: 10px 30px;
     color: white;
@@ -35,7 +35,7 @@ footer div{
 }
 
 footer div span {
-    margin: 0px 2.5px 0px 2.5px;
+    margin: 0 2.5px 0 2.5px;
     padding: 10px;
     width: -webkit-fill-available;
     background: #87d849;

@@ -83,7 +83,7 @@ function createSliderElements(){
     captionText.setAttribute('class', "captiontext");
     captionText.innerText = "Caption Text 1";
     slider.appendChild(captionText);
-    
+
     const pointlist = document.createElement('div');
     pointlist.setAttribute('class', "pointlist");
     pointlist.setAttribute('id', "pointlist");
@@ -91,7 +91,7 @@ function createSliderElements(){
         const point = document.createElement('div');
         point.setAttribute('class', "pfalse");
         point.setAttribute('id', `point_${i}`);
-        point.setAttribute('onclick', `currentSlide('${i}')`); 
+        point.setAttribute('onclick', `currentSlide('${i}')`);
         pointlist.appendChild(point);
     }
     slider.appendChild(pointlist);
@@ -128,7 +128,7 @@ function manage(){
             }
             if(state.id == 'navs'){
                 prev.classList.toggle('none', state.checked===false);
-                next.classList.toggle('none', state.checked===false);    
+                next.classList.toggle('none', state.checked===false);
             }
             if(state.id == 'pags'){
                 document.getElementById('pointlist').style.display = state.checked ? 'flex' : 'none'  ;

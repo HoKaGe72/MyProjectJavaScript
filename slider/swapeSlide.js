@@ -1,4 +1,4 @@
-let swipeAction, swipeEnd, swipeStart, stateAutoSwipe = false, secSwipe = 0, stopAutoSwipeOnHover = false, stateautoswipe = true, autoswipeInterval; 
+let swipeAction, swipeEnd, swipeStart, stateAutoSwipe = false, secSwipe = 0, stopAutoSwipeOnHover = false, stateautoswipe = true, autoswipeInterval;
 
 // Включение свапа
 onSwipe = () =>{
@@ -153,11 +153,11 @@ onSwipe = () =>{
     };
 
     if(slideIndex===0){
-        sliderTrack.style.transform = `translate3d(${slideIndex}px, 0px, 0px)`;  
+        sliderTrack.style.transform = `translate3d(${slideIndex}px, 0px, 0px)`;
     }else{
         sliderTrack.style.transform = `translate3d(-${slideIndex}000px, 0px, 0px)`
     }
-    
+
     sliderList.classList.add('grab');
     sliderTrack.addEventListener('transitionend', () => allowSwipe = true);
     slider.addEventListener('touchstart', swipeStart);
@@ -225,5 +225,5 @@ mous = () =>{
             slide.removeEventListener('mouseleave', handleMouseHover);
         });
     }
-    
+
 }

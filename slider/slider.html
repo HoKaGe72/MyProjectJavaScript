@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Slider</title>
-    <link rel="stylesheet" href="/slider/slider.css">
-    <script src="/slider/addElementsSlide.js" id="addElementsSlide"></script>
+    <link rel="stylesheet" href="slider.css">
+    <script src="addElementsSlide.js" id="addElementsSlide" type="module"></script>
 </head>
 <body>
     <main id="main">
         <h2>My Slider</h2>
+
         <div id="controls">
             <label>
                 Слайд по кругу 
@@ -43,7 +44,7 @@
             </label>
             <label>
                 Время(сек):
-                <input type="number" id="delay" value="5" min="1" max="60" onkeypress="return false">
+                <input type="number" id="delay" value="5" min="1" max="60">
             </label>
         </div>
     </main>

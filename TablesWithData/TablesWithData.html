@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TablesWithData</title>
+    <link rel="stylesheet" href="TableWithData.css">
+    <script src="TablesWithData.js"></script>
+</head>
+<body>
+    <main>
+        <div class="header-control">
+            <div class="button">
+                <button class="btnData" id="btn-BigData" onclick="ButtonBigData()">Большой набор данных</button>
+                <button class="btnData" id="btn-SmallData" onclick="ButtonSmallData()">Маленьки набор данных</button>
+            </div>
+            <div class="controller" style="display: none">
+                <label>
+                    <select id="search-column">
+                        <option value="0">id</option>
+                        <option value="1">firstName</option>
+                        <option value="2">lastName</option>
+                        <option value="3">email</option>
+                        <option value="4">phone</option>
+                    </select>
+                </label>
+                <label for="filter"></label><input id="filter" type="text" placeholder="Поиск..." autocomplete="off">
+                <button class="search" onclick="searchTable()">Найти</button>
+                <button class="add" onclick="ShowAddRecordBlock()">Добавить</button>
+            </div>
+        </div>
+        <form style="display: none">
+            <table id="data-table">
+                <thead>
+                <tr>
+                    <th onclick="sortTable(0)" id="id">id <span class="sort-icon">▲</span></th>
+                    <th onclick="sortTable(1)" id="firstName">firstName <span class="sort-icon">▼</span></th>
+                    <th onclick="sortTable(2)" id="lastName">lastName <span class="sort-icon">▼</span></th>
+                    <th onclick="sortTable(3)" id="email">email <span class="sort-icon">▼</span></th>
+                    <th onclick="sortTable(4)" id="phone">phone <span class="sort-icon">▼</span></th>
+                </tr>
+                </thead>
+                <tbody id="tbody" data-sort-asc="true">
+                </tbody>
+            </table>
+        </form>
+        <div class="table-arrows" style="display: none">
+            <button class="btnPrev" id="prev" onclick="PrevNext('prev')">Назад</button>
+            <span id="number-table" style="margin-right: 10px;"></span>
+            <button class="btnNext" id="next" onclick="PrevNext('next')">Вперёд</button>
+        </div>
+    </main>
+    <div class="Record" id="Record" style="display: none">
+        <div class="inputRecord">
+            <label><input id="idRecord" type="number" placeholder="Id..." autocomplete="off" step="any"></label>
+            <label><input id="firstNameRecord" type="text" placeholder="FirstName..." autocomplete="off"></label>
+            <label><input id="lastNameRecord" type="text" placeholder="LastName..." autocomplete="off"></label>
+            <label><input id="emailRecord" type="email" placeholder="Email..." autocomplete="off"></label>
+            <label><input id="phoneRecord" type="tel" placeholder="Phone..." autocomplete="off"></label>
+        </div>
+        <span class="errorRecord"></span>
+        <div class="CancelAddRecord">
+            <button class="CancelRecord" onclick="CancelRecord()">Отмена</button>
+            <button class="AddRecord" onclick="AddRecord()">Добавить запись</button>
+        </div>
+    </div>
+    <div class="InfoUser" style="display: none">
+        <h1>Информация о пользователе</h1>
+        <div class="info"></div>
+        <button class="CancelCard" onclick="CancelCard()">Закрыть</button>
+    </div>
+</body>
+</html>

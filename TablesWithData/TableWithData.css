@@ -1,0 +1,159 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+    margin-top: 30px;
+}
+
+main{
+    margin: 0;
+    display: block;
+    width: 100%;
+    position: relative;
+}
+
+.header-control{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.button{
+    margin-bottom: 20px;
+}
+
+.btnData{
+    margin: 10px 10px 0 10px;
+    height: 45px;
+    padding: 10px;
+    align-content: center;
+    border-radius: 10px;
+    background: #004580;
+    box-shadow: #004a97 0 0 5px 2px;
+    color: white;
+    cursor: pointer;
+}
+
+.btnData:hover{
+    background: #022448;
+    box-shadow: #022448 0 0 5px 2px;
+    transform: scale(1.05);
+}
+
+.controller{
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 0 2fr 1fr 1fr;
+}
+
+select, input[type="text"], input[type="number"], input[type="email"], input[type="tel"]{
+    border: none;
+    box-shadow: #004a97 0 0 5px 2px;
+    border-radius: 5px;
+    height: 30px;
+    margin: 8px 6px;
+    font-size: 15px;
+    padding: 0 5px;
+}
+
+.search, .add, .btnPrev, .btnNext, .CancelRecord, .AddRecord, .CancelCard {
+    margin-right: 5px;
+    margin-left: 5px;
+    height: 35px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.search:hover, .add:hover, .btnPrev:hover,.btnNext:hover, .CancelRecord:hover, .AddRecord:hover, .CancelCard:hover{
+    transform: scale(1.05);
+}
+
+form{
+    margin: 0 10px 10px 10px;
+    display: flex;
+    justify-content: center;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 20px;
+}
+
+th, td {
+    border: 1px solid #022448;
+    padding: 8px;text-align: center;
+}
+
+th {
+    cursor: pointer;
+    background-color: #004a97;
+    color: white;
+}
+
+th:hover {
+    background-color: #022448;
+}
+
+.table-arrows{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btnPrev.disabled,.btnNext.disabled{
+    opacity: .25;
+    pointer-events: none;
+}
+
+.Record{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: #004a97 0 0 5px 2px;
+    padding: 10px;
+    border-radius: 10px;
+    position: fixed;
+    top: 150px;
+    background: #f4f4f4;
+    margin: 10px;
+    max-width: 90%;
+    box-sizing: border-box;
+}
+
+.InfoUser{
+    box-shadow: #004a97 0 0 5px 2px;
+    padding: 15px;
+    border-radius: 10px;
+    position: fixed;
+    top: 100px;
+    background: #f4f4f4;
+    margin: 10px;
+    max-width: 90%;
+    box-sizing: border-box;
+}
+
+.inputRecord{
+    display: flex;
+    margin: 10px 5px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.errorRecord{
+    margin-bottom: 5px;
+    color: red;
+}
