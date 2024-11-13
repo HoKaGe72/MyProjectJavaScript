@@ -18,22 +18,22 @@ footer {
     z-index: 99999999999;
 	position: fixed;
     top: 89%;
-    left: 0%;
+    left: 0;
     width: 98.6%;
 }
 
 footer div{
     display: flex;
-    margin: 0 5%;
+    margin: 0 5% 3px 5%;
     background-color: #1a649b;
     padding: 10px 30px;
     color: white;
     text-align: center;
     box-shadow: 0 0 10px rgb(67 171 247);
     border-radius: 5px;
-    margin-bottom: 3px;
 }
 
+/*noinspection ALL*/
 footer div span {
     margin: 0 2.5px 0 2.5px;
     padding: 10px;
@@ -55,7 +55,7 @@ footer div span:hover{
 
 #container {
     display: flex;
-    margin: 0% 5%;
+    margin: 0 5%;
     flex-direction: column;
     border-color: black;
 }
@@ -81,18 +81,18 @@ footer div span:hover{
 }
   
 input[type="text"] {
-    margin: 0px 5px 0px 0px;
+    margin: 0 5px 0 0;
     border: none;
     width: 75%;
     padding: 10px;
     float: left;
     font-size: 16px;
-    box-shadow: 0 0 10px rgbargb(67 171 247);
+    box-shadow: 0 0 10px rgb(67 171 247);
     border-radius: 5px;
 }
   
 #btn_add {
-    margin: 0px 0px 0px 5px;
+    margin: 0 0 0 5px;
     padding: 10px;
     width: 25%;
     background: #87d849;
@@ -146,19 +146,6 @@ ul li.checked {
     color: #fff;
     text-decoration: line-through;
 }
-/* 
-ul li.checked::before {
-    content: '';
-    position: absolute;
-    border-color: #fff;
-    border-style: solid;
-    border-width: 0 2px 2px 0;
-    top: 14px;
-    left: 16px;
-    transform: rotate(45deg);
-    height: 15px;
-    width: 7px;
-} */
 
 .close {
     position: absolute;

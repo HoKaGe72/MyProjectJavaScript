@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function(){
-    var list = document.querySelector('ul');
+    const list = document.querySelector('ul');
     list.addEventListener('click', function(ev) {
         if (ev.target.tagName === 'LI') {   
             ev.target.classList.toggle('checked');            
@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function(){
 })
 
 function add_todo(){
-    var todo = document.createElement("li");
+    const todo = document.createElement("li");
     let input_todo_value = document.getElementById("input_todo").value;
     todo.textContent = input_todo_value;
     if(input_todo_value===""){
@@ -25,11 +25,11 @@ function add_todo(){
     }
     document.getElementById("input_todo").value = "";
 
-    var checkbox = document.createElement('input');
+    const checkbox = document.createElement('input');
     checkbox.setAttribute('type', "checkbox")
     checkbox.setAttribute('style', "margin-right: 10px");
-    var span = document.createElement("SPAN");
-    var txt = document.createTextNode("\u00D7");
+    const span = document.createElement("SPAN");
+    const txt = document.createTextNode("\u00D7");
     span.className = "close";
     span.appendChild(txt);
     todo.appendChild(span);
@@ -42,21 +42,21 @@ function add_todo(){
 }
 
 function creat_close(){
-    var myNodelist = document.getElementsByTagName("li");
-    for (let i = 0; i < myNodelist.length; i++) {
-        var span = document.createElement("SPAN");
-        var txt = document.createTextNode("\u00D7");
+    const Novelist = document.getElementsByTagName("li");
+    for (let i = 0; i < Novelist.length; i++) {
+        const span = document.createElement("SPAN");
+        const txt = document.createTextNode("\u00D7");
         span.className = "close";
         span.appendChild(txt);
-        myNodelist[i].appendChild(span);
+        Novelist[i].appendChild(span);
     }
 }
 
 function bindCloseButtons() {
-    var closeButtons = document.getElementsByClassName("close");
+    const closeButtons = document.getElementsByClassName("close");
     for (let i = 0; i < closeButtons.length; i++) {
         closeButtons[i].onclick = function() {
-            var li = this.parentElement;
+            let li = this.parentElement;
             li.remove();
         }
     }
